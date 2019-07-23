@@ -34,7 +34,9 @@ jobs:
 #          key: v1-dependencies-{{ checksum "package.json" }}
 
       # run build!
+      - run: npm run build
+
       - run:
-        command: |
-                 npm run build
-                 cat /root/.npm/_logs/*
+          command: |
+            cat /root/.npm/_logs/*
+          when: on_fail
