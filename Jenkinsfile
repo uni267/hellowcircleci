@@ -1,9 +1,8 @@
 pipeline {
-    agent { docker 'node:8.15' }
     stages {
         stage('setup') {
             steps {
-                sh 'npm install'
+                sh 'groups'
             }
         }
         stage('build') {
@@ -11,5 +10,4 @@ pipeline {
                 sh 'npm run build'
             }
         }
-    }
 }
