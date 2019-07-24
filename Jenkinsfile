@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker 'node:8.15' }
+    agent { docker 'node:8.15.0' }
     stages {
         stage('setup') {
             steps {
